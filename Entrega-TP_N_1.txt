@@ -1,0 +1,89 @@
+Entrega-TP_N_1
+
+RETO I: ¿Podrías buscar un ejemplo de macromoléculas que almacenen
+información sobre la ‘identidad’ de un organismo dado?
+	
+	- En ejemplo de macromolécula que almacena dicho tipo de informacion son los ácidos nucleicos, como puede ser el dna.
+
+---------------------------------------
+
+RETO II: Proponé una forma de expresar la información contenida en la estructura
+primaria de las proteínas usando tipos de datos de los lenguajes de programación
+que conocés.
+
+	class Proteina {
+		ArrayList[Aminoacido] aminoacidos;
+	}
+
+	class Aminoacido {
+		String codigo;
+		ArrayList[Atom] atomos;
+	}
+
+	enum Atom {
+		C
+		H
+		N
+		O
+	}
+
+---------------------------------------
+
+RETO III: ¿ En qué tipo de datos podrías expresar la información de la estructura
+terciaria proteica?
+	- Una forma que se me ocurre es una matriz de tres dimenciones que guarde los puntos de las listas de aminoácidos donde se producen interacciones entre las cadenas
+
+---------------------------------------
+
+RETO IV: Rosalind Franklin es una científica muy relevante, que tuvo menos
+reconocimiento del merecido. ¿Cuáles fueron sus contribuciones en este campo?
+¿Qué nos cuenta su historia acerca del mundo de la ciencia?
+
+	- Sus contribuciones en el campo fueron una gran variedad de datos resultantes del uso de la difracción de rayos X y preparó el camino para el descubrimiento de la estructura tridimensional del ADN 
+
+	- Su historia nos cuenta un poco como era el entorno machista que rodeada a la sociedad en ese entonces y sin excepcion dentro del mundo de la ciencia.
+
+---------------------------------------
+
+RETO V: Proponé en pseudocódigo un programa que prediga la estructura
+secundaria que adoptará cada residuo de la secuencia proteica dada, especificandola
+como H (si es una hélice), B (si es una hoja beta plegada) y L (si es un bucle o loop).
+
+	unaProteina.estructuraDeEnlases()
+
+	func estructuraDeEnlases(){
+		Aminoacido actual = nil;
+		Aminoacido anterior = nil;
+		for aminoacido in self.aminoacidos {
+			actual = aminoacido
+			if anterior = nil {
+				anterior = actual
+			} else {
+
+				print(self.estructuraDelPar(anterior,actual))
+				anterior = actual 
+			}
+		}
+
+	}
+	//estructuraDelPar: funcion que analiza la forma de la secuencia y retorna H (hélice), B (beta plegada) o L (loop) dependiendo de la secuencia dada 
+
+---------------------------------------
+
+PARA PENSAR: ¿Cuántas proteínas puede sintetizar un organismo? ¿De qué
+depende la cantidad y la característica de las proteínas que puede sintetizar un
+organismo?
+
+	- Pienso que un organismo puede sintetizar millones de proteinas.
+
+	- Entiendo que la cantidad y la caracteristica de las proteinas que puede sintetizar un organismo depende de la secuencia de aminoacidos obtenidos de la información genética que proporcione el ADN del mismo.
+
+---------------------------------------
+
+RETO VI: ¿Qué hace distintos a dos individuos de una especie? Propone una forma
+de corroborar tu respuesta realizando un diagrama de un posible método
+computacional para dicho fin.
+
+	- Lo que hace distintos dos individuos de una misma especie es la variabilidad que presentan los genes que componen las cadenas de ADN.
+
+	- Una forma que se me ocurre es una programa que analice patrones de cadenas de adn para determinar si una cadena repite un patron de igual manera que la otra
