@@ -49,24 +49,20 @@ RETO V: Proponé en pseudocódigo un programa que prediga la estructura
 secundaria que adoptará cada residuo de la secuencia proteica dada, especificandola
 como H (si es una hélice), B (si es una hoja beta plegada) y L (si es un bucle o loop).
 
+(Se tiene que hacer con la tabla de la probabilidad de forma que tiene cada aminoacido)
+ej entrada: 		GLY- LYS - MET-ARG (G-K-M-R)
+	el output seria L, 	   H,   H,  H 
+
+
 	unaProteina.estructuraDeEnlases()
 
 	func estructuraDeEnlases(){
-		Aminoacido actual = nil;
-		Aminoacido anterior = nil;
 		for aminoacido in self.aminoacidos {
-			actual = aminoacido
-			if anterior = nil {
-				anterior = actual
-			} else {
-
-				print(self.estructuraDelPar(anterior,actual))
-				anterior = actual 
-			}
+			print(self.estructuraPotencial(aminoacido))
 		}
 
 	}
-	//estructuraDelPar: funcion que analiza la forma de la secuencia y retorna H (hélice), B (beta plegada) o L (loop) dependiendo de la secuencia dada 
+	//estructuraPotencial: devuelve la estructura que mas probabilidad de adopatar tiene el residuo a partir de la tabla de estructuras
 
 ---------------------------------------
 
@@ -74,7 +70,7 @@ PARA PENSAR: ¿Cuántas proteínas puede sintetizar un organismo? ¿De qué
 depende la cantidad y la característica de las proteínas que puede sintetizar un
 organismo?
 
-	- Pienso que un organismo puede sintetizar millones de proteinas.
+	- Pienso que un organismo puede sintetizar muchisimas proteías y de depende del tipo de organismo.
 
 	- Entiendo que la cantidad y la caracteristica de las proteinas que puede sintetizar un organismo depende de la secuencia de aminoacidos obtenidos de la información genética que proporcione el ADN del mismo.
 
@@ -84,6 +80,6 @@ RETO VI: ¿Qué hace distintos a dos individuos de una especie? Propone una form
 de corroborar tu respuesta realizando un diagrama de un posible método
 computacional para dicho fin.
 
-	- Lo que hace distintos dos individuos de una misma especie es la variabilidad que presentan los genes que componen las cadenas de ADN.
+	- Depende de las proteínas que pueden sintetizar.
 
-	- Una forma que se me ocurre es una programa que analice patrones de cadenas de adn para determinar si una cadena repite un patron de igual manera que la otra
+	- Una forma que se me ocurre es una programa que analice la secuencia de cadenas de adn para determinar si una cadena es igual que otra.
